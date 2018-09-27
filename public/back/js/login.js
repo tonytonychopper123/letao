@@ -81,4 +81,6 @@ $(function(){
         var validator = $('#form').data('bootstrapValidator');
         validator.resetForm();
     });
+
+    
 }); 
