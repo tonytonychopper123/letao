@@ -102,3 +102,14 @@ ul {
 .container-fluid {
   padding-top: 20px;
 }
+.container-fluid th {
+  text-align: center;
+}
+.container-fluid .table > tbody > tr > td,
+.container-fluid .table > tbody > tr > th,
+.container-fluid .table > tfoot > tr > td,
+.container-fluid .table > tfoot > tr > th,
+.container-fluid .table > thead > tr > td,
+.container-fluid .table > thead > tr > th {
+  vertical-align: middle;
+}

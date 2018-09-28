@@ -46,3 +46,4 @@ var $category = $('.category');
 $category.on('click' , function(){
     $category.next().slideToggle();
 });
+
