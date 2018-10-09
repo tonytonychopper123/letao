@@ -1,0 +1,86 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    padding: 45px 0 55px 0;
+    background-color: #fff;
+}
+/* header区域 */
+.container .header{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #069;
+    z-index: 66;
+}
+.container .header a{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    top: 0;
+    color: #fff;
+    font-size: 16px;
+}
+.container .header a.home{
+    left: 0;
+}
+.container .header a.search{
+    right: 0;
+}
+.container .header p{
+    padding: 0 45px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 45px;
+}
+/* footer区域 */
+.container .footer{
+    position: absolute;
+    height: 55px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #069;
+}
+.container .footer li {
+    float: left;
+    width: 25%;
+    height: 55px;
+    text-align: center;
+    padding-top: 5px;
+}
+.container .footer li a{
+    display: block;
+    height: 100%;
+    color: #fff;
+}
+.container .footer li p{
+    color: #fff;
+}
+.container .footer li a.current{
+    color: orange;
+}
+.container .footer li a.current p{
+    color: orange;
+}
