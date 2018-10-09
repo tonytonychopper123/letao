@@ -1,0 +1,44 @@
+.container .main{
+    height: 100%;
+}
+.main .search{
+    height: 54px;
+    padding: 10px;
+    position: relative;
+}
+.main .search input{
+    height: 34px;
+    padding-right: 54px;
+    font-size: 12px;
+    border: 1px solid #007AFF;
+}
+.main .search button{
+    width: 54px;
+    height: 34px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.main .content{
+    padding: 10px;
+    color: #666;
+    font-size: 12px;
+}
+.main .content ul{
+    margin-top: 5px;
+}
+.main .content li{
+    border: 1px dashed red;
+    border-top: none;
+    height: 30px;
+    line-height: 30px;
+    color: #007AFF;
+    text-indent: 15px;
+}
+.main .content li i{
+    color: #666;
+}
+.main .content li:first-child{
+    border-top: 1px dashed red;
+}
