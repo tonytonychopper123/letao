@@ -31,6 +31,7 @@ $(function(){
             data: obj,
             dataType: 'json',
             success: function(info){
+                
                 var str = template('tmp' , info);
                 $('.product').html(str);
             }
@@ -60,5 +61,9 @@ $(function(){
         key = $('.search input').val();
         $('.product').html('<div class="load"></div>');
         setTimeout(render , 500);
+    });
+    //点击购买,跳到相应页面
+    $('.product').on('click' , '.btn-buy' , function(){
+        location.href = 'product.html?id=' + $(this).data('id');
     });
 });

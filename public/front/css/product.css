@@ -1,0 +1,39 @@
+.main{
+    width: 100%;
+    height: 100%;
+}
+.act{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 5px;
+}
+.act.detail{
+    border-bottom: 1px solid red;
+}
+.pro-footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    padding: 5px 0;
+    background-color: #EFEFF4;
+    z-index: 99;
+}
+.pro-footer button{
+    margin-left: 5px;
+}
+.size span{
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 25px;
+    height: 25px;
+    margin: 0 2px;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.size span.current{
+    background-color: orange;
+    color: #fff;
+}

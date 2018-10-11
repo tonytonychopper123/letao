@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <div class="header">
+            <a class="home" href="javascript:history.back();"><i class="mui-icon mui-icon-back"></i></a>
+            <p>商品详情</p>
+            <a class="search" href="#"><i class="mui-icon mui-icon-reload"></i></a>
+        </div>
+        <!-- 主体区域 -->
+        <div class="main">
+
+        </div>
+        <!-- footer区域 -->
+        <div class="pro-footer">
+            <a href="#" class="mui-pull-left">前往购物车</a>
+            <button class="mui-pull-right mui-btn mui-btn-warning">买买买</button>
+            <button class="mui-pull-right mui-btn mui-btn-danger btn-cart">加入购物车</button>
+        </div>
+    </div>
+
+
+    <script type="text/template" id="tmp">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 轮播 -->
+                <div class="mui-slider act">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{ pic[0].picAddr }}" /></a></div>
+                        {{ each pic v i }}
+                        <div class="mui-slider-item"><a href="#"><img src="{{ v.picAddr }}" /></a></div>
+                        {{ /each }}
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{ pic[pic.length-1].picAddr }}" /></a></div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        {{ each pic v i }}
+                        <div class="mui-indicator mui-active"></div>
+                        {{ /each }}
+                    </div>
+                </div>
+                <div class="proName act">
+                    <p>{{ proName }}</p>
+                </div>
+                <div class="act price">
+                    价格: <span style="color:red; margin-right: 5px;">&yen;{{ price }}</span><span>&yen;{{ oldPrice }}</span>
+                </div>
+                <div class="act size">
+                    尺码: 
+                    <% 
+                        var arr = size.split('-');
+                        var start = arr[0];
+                        var end = arr[1];
+                        for(var i=start; i<=end; i++ ){
+                    %>
+                    <span>{{ i }}</span>
+                    <% } %>
+                </div>
+                <div class="act num">
+                    数量:
+                    <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max="{{ num }}">
+                            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                            <input class="mui-numbox-input" type="number" />
+                            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                    </div>
+                    <span>剩余数量: {{ num }}双</span>
+                </div>
+                <div class="act detail">
+                    详情:描述
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/product.js"></script>
+
+</html>

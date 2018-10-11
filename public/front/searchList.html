@@ -85,7 +85,7 @@
             <img src="{{ v.pic[0].picAddr }}" alt="">
             <p class="mui-ellipsis-2">{{ v.proName }}</p>
             <span class="price">&yen;{{ v.price }}</span><span class="old-price">&yen;{{ v.oldPrice }}</span>
-            <button class="mui-btn mui-btn-primary">立即购买</button>
+            <div><button class="mui-btn mui-btn-primary btn-buy" data-id="{{ v.id }}">立即购买</button></div>
         </li>
         {{ /each }}
         </ul>
