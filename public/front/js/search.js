@@ -24,6 +24,8 @@ $('.container .content').on('click', '.clearinfo', function () {
 $('.btn-search').on('click', function () {
     //获取input内容
     var key = $('input').val().trim();
+    //点击搜索跳转
+    location.href = 'searchList.html?key=' + key;
     //清空input输入值
     $('input').val('');
     if (key == '') {
